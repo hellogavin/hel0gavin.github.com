@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui>
+	<!-- application menu data -->
+	<appMenu>
+		<menu text="File">
+			<subMenu text="Open"/>
+			<subMenu text="Save"/>
+			<subMenu text="Exit"/>
+		</menu>
+		<menu text="Help">
+			<subMenu text="Help"/>
+			<subMenu text="About"/>
+		</menu>
+	</appMenu>
+</ui>
