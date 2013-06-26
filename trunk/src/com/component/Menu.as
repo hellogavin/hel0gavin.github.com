@@ -8,6 +8,8 @@ package com.component
 	import flash.events.Event;
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
+	
+	import mx.utils.StringUtil;
 
 	/**
 	 * <p>Description: </p>
@@ -76,11 +78,18 @@ package com.component
 		{
 			var subMenu:NativeMenu = new NativeMenu();
 			var menuItem:NativeMenuItem = new NativeMenuItem(xml.@text);
+			menuItem.mnemonicIndex=0;
 			for each (var obj:XML in xml.subMenu)
 			{
 				var item:NativeMenuItem = new NativeMenuItem(obj.@text);
-				subMenu.addItem(item);
+				item.mnemonicIndex=0;
+				subMenu.addItem(item);item.keyEquivalent=item.label.substr(0,1);
 				_itemVector.push(item);
+				if(obj.@text=="Save")
+				{
+					item=new NativeMenuItem("",true);
+					subMenu.addItem(item);
+				}
 			}
 			menuItem.submenu = subMenu;
 			return menuItem;
