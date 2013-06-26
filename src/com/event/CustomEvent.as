@@ -16,6 +16,12 @@ package com.event
 		public static const SELECT_ITEM:String="selectItem";
 		
 		public static const CREATE_MENU_FINISH:String="finistCreate";
+		
+		public static const LOADED_FILE:String="loadedFile";
+		
+		public static const OPEN_ONE_FILE_CLICK:String="openOneFileClick";
+		
+		public static const SAVE_FILE:String="saveFile";
 		public function CustomEvent(type:String, bubbles:Boolean=false, cancelable:Boolean=false)
 		{
 			super(type, bubbles, cancelable);
